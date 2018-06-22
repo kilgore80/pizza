@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Johnny's Pizza</title>
+		<link type="text/css" rel="stylesheet" href="./css/style.css">	
+	</head>
+		<body>
+			<h1 style="color:blue;margin-left:30px;font-size: 80px;" align="center">Johnny's Pizzeria</h1>
+			<image class="img" src="./images/pizza_pic4.jpg" alt="pic of pizza" >
+				<br>
+				<br>
+		<fieldset>	
+			<legend>What Size pizza do you want?</legend>
+    			<form action="">
+					<input type="radio" class="size" name="size" value="Personal" checked>Personal $6.00<br>
+					<input type="radio" class="size" name="size" value="Medium">Medium $10.00<br>
+					<input type="radio" class="size" name="size" value="Large">Large $14.00<br>
+					<input type="radio" class="size" name="size" value="Extra Large">Extra Large $16.00<br>
+		        </form>
+		</fieldset>        
+		<br>
+		 <form action="">
+        	<fieldset>
+        		<legend>What kind of crust do you want?</legend>
+        		<input type="radio" class="crust" name="crust" value="Plain" checked>Plain Crust<br>
+        		<input type="radio" class="crust" name="crust" value="Garlic Butter">Garlic Butter Crust<br>
+        		<input type="radio" class="crust" name="crust" value="Stuffed Crust">Cheese Stuffed Crust +$3.00<br>
+        		<input type="radio" class="crust" name="crust" value="Spicy">Spicy Crust<br>
+        		<input type="radio" class="crust" name="crust" value="House Special">House Special Crust<br>
+        	</fieldset>
+        </form>
+        <br>
+        <form action="">
+        	<fieldset>
+        		<legend>What kind of Sauce do you want?</legend>
+        		<input type="radio" class="sauce" name="sauce" value="Marinara" checked>Marinara<br>
+        		<input type="radio" class="sauce" name="sauce" value="White">White Sauce<br>
+        		<input type="radio" class="sauce" name="sauce" value="BBQ">BBQ Sauce<br>
+        		<input type="radio" class="sauce" name="sauce" value="No Sauce">No Sauce<br>
+        	</fieldset>
+        </form>
+        <br>
+        <form action="">
+        	<fieldset>
+        		<legend>Cheese?</legend>
+        		<input type="radio" class="cheese" name="cheese" value="Regular" checked>Regular Amount<br>
+        		<input type="radio" class="cheese" name="cheese" value="No Cheese">No Cheese<br>
+        		<input type="radio" class="cheese" name="cheese" value="Extra Cheese">Extra Cheese +$3.00<br>
+        	</fieldset>
+        </form>
+        <br>
+        <form action="">
+			<fieldset>
+				<legend>What meats do you want on your pizza?(First Meats on Us. Each additional topping is $1.00</legend>
+				<div>
+					<input type="checkbox" id="pepperoni" class="meat" value="Pepperoni">
+					<label for="pepperoni">Pepperoni</label>
+				</div>
+				<div>
+					<input type="checkbox" id="sausage" class="meat" value="Sausage">
+					<label for="sausage">Sausage</label>
+				</div>
+				<div>
+					<input type="checkbox" id="bacon" class="meat" value="Canadian Bacon">
+					<label for="Canadian Bacon">Canadian Bacon</label>
+				</div>
+				<div>
+					<input type="checkbox" id="beef" class="meat" value="Beef">
+					<label for="beef">Ground Beef</label>
+				</div>
+				<div>
+					<input type="checkbox" id="anchovy" class="meat" value="Anchovy">
+					<label for="anchovy">Anchovy</label>
+				</div>
+				<div>
+					<input type="checkbox" id="chicken" class="meat" value="Chicken">
+					<label for="chicken">Chicken</label>
+				</div>
+            </fieldset>
+        </form>
+        <br>
+        <form action="">
+			<fieldset>
+				<legend>What kind of veggies do you want?(First Veggie is on us. Each additional topping is $1.00</legend>
+				<div>
+					<input type="checkbox" id="tomatoes" class="veggies" value="Tomatoes">
+					<label for="tomatoes">Tomatoes</label>
+				</div>
+				<div>
+					<input type="checkbox" id="onions" class="veggies" value="Onions">
+					<label for="onions">Onions</label>
+				</div>
+				<div>
+					<input type="checkbox" id="olives" class="veggies" value="Olives">
+					<label for="olives">Olives</label>
+				</div>
+				<div>
+					<input type="checkbox" id="peppers" class="veggies" value="Green Peppers">
+					<label for="peppers">Green Peppers</label>
+				</div>
+				<div>
+					<input type="checkbox" id="shrooms" class="veggies" value="Mushrooms">
+					<label for="shrooms">Mushrooms</label>
+				</div>
+				<div>
+					<input type="checkbox" id="pineapple" class="veggies" value="Pineapple">
+					<label for="pineapple">Pineapple</label>
+				</div>
+				<div>
+					<input type="checkbox" id="spinach" class="veggies" value="Spinach">
+					<label for="spinach">Spinach</label>
+				</div>
+				<div>
+					<input type="checkbox" id="jlap" class="veggies" value="Jalapenos">
+					<label for="jlap">Jalapenos</label>
+				</div>
+            </fieldset>
+        </form>
+        <br>
+        <button type="button" class="btn" onclick="getReceipt()">Order That Pizza!</button>
+        <image class="img" src="./images/pizza_pic5.jpg" alt="pic of pizza" >
+        <br>
+        <div id="receipt"></div>
+        <br>
+        <table>
+        	<tr id="customers">
+        		<th>Size:</th>
+        		<td id="ps"></td>
+        		<th>Crust:</th>
+        		<td id="pc"></td>
+        		<th>Sauce:</th>
+                <td id="ss"></td>
+        		<th>Cheese:</th>
+        		<td id="cc"></td>
+        		<th>Meat Toppings:</th>
+        		<td id="pm"></td>
+        		<th>Veggie Toppings:</th>
+        		<td id="pv"></td>
+        	</tr>
+        </table>
+        <br>
+        <br>
+        	<div id="total"></div>
+        <script src="./js/pizza.js"></script>
+       </body>
+</html>
+
